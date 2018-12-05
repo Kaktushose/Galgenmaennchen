@@ -9,20 +9,20 @@ uses
 
 type
 
-	{ TFWortraten }
+{ TFWortraten }
 
   TFWortraten = class(TForm)
-		BRaten : TButton;
-		BNeuesSpiel : TButton;
-		EVersuche : TEdit;
-		EWort : TEdit;
-		EEingabe : TEdit;
-		EHinweis : TEdit;
-		LVersuche : TLabel;
- procedure BNeuesSpielClick(Sender : TObject);
- procedure BRatenClick(Sender : TObject);
+  BRaten : TButton;
+  BNeuesSpiel : TButton;
+  EVersuche : TEdit;
+  EWort : TEdit;
+  EEingabe : TEdit;
+  EHinweis : TEdit;
+  LVersuche : TLabel;
+  procedure BNeuesSpielClick(Sender : TObject);
+  procedure BRatenClick(Sender : TObject);
   procedure FormCreate(Sender : TObject);
-	procedure FormDestroy(Sender : TObject);
+  procedure FormDestroy(Sender : TObject);
   private
     { private declarations }
   public
@@ -49,20 +49,20 @@ end;
 
 procedure TFWortraten.BRatenClick(Sender : TObject);
 begin
-  if not(EEingabe.Text = '') then
+  if not (EEingabe.Text = '') then
   begin
-	  oSpiel.setzeSpielereingabe(EEingabe.Text);
-	  EWort.Text := oSpiel.sGibVerschluesselung;
-	  if (oSpiel.bGeraten) then
-	    begin
-        EHinweis.Color := clGreen;
-	      EHinweis.Text := oSpiel.sGibHinweis;
-	      EEingabe.Enabled := False;
-	      BRaten.Enabled := False;
-			end;
-	  EVersuche.Text := oSpiel.sGibVersuche;
-	  EHinweis.Text := oSpiel.sGibHinweis;
-	end
+    oSpiel.setzeSpielereingabe(EEingabe.Text);
+    EWort.Text := oSpiel.sGibVerschluesselung;
+    if (oSpiel.bGeraten) then
+    begin
+      EHinweis.Color := clGreen;
+      EHinweis.Text := oSpiel.sGibHinweis;
+      EEingabe.Enabled := False;
+      BRaten.Enabled := False;
+    end;
+    EVersuche.Text := oSpiel.sGibVersuche;
+    EHinweis.Text := oSpiel.sGibHinweis;
+  end
   else
     EHinweis.Text := 'Bitte Buchstaben eingeben';
 end;
