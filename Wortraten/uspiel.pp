@@ -95,19 +95,19 @@ procedure TSpiel.Auswerten;
 begin
   sHinweis := 'Du hast keinen Buchstaben erraten!';
   for iNr := 1 to Length(sWort) do
-	begin
+  begin
     if (AnsiLowerCase(sWort[iNr]) = sSpielereingabe[1]) then
     begin
-	    sVerschluesselung[iNr] := sWort[iNr];
-	    iNichtErratene := iNichtErratene - 1;
-	    sHinweis := 'Noch ' + IntToStr(iNichtErratene) + ' Buchstabe(n) sind zu erraten!';
+      sVerschluesselung[iNr] := sWort[iNr];
+      iNichtErratene := iNichtErratene - 1;
+      sHinweis := 'Noch ' + IntToStr(iNichtErratene) + ' Buchstabe(n) sind zu erraten!';
       if sVerschluesselung = sWort then
       begin
         bErraten := True;
         sHinweis := 'Du hast das Wort erraten!';
-			end;
-		end;
-	end;
+      end;
+   end;
+end;
 
 	if AnsiLowerCase(sWort) = sSpielereingabe then
   begin
