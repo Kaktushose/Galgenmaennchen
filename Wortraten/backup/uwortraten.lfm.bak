@@ -1,0 +1,68 @@
+object FWortraten: TFWortraten
+  Left = 885
+  Height = 207
+  Top = 228
+  Width = 402
+  Caption = 'Wortraten'
+  ClientHeight = 207
+  ClientWidth = 402
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.4.0'
+  object EWort: TEdit
+    Left = 48
+    Height = 23
+    Top = 24
+    Width = 168
+    Enabled = False
+    TabOrder = 0
+  end
+  object BRaten: TButton
+    Left = 48
+    Height = 23
+    Top = 56
+    Width = 75
+    Caption = 'testen'
+    OnClick = BRatenClick
+    TabOrder = 1
+  end
+  object EEingabe: TEdit
+    Left = 136
+    Height = 23
+    Top = 56
+    Width = 80
+    TabOrder = 2
+  end
+  object EHinweis: TEdit
+    Left = 48
+    Height = 23
+    Top = 88
+    Width = 344
+    TabOrder = 3
+  end
+  object BNeuesSpiel: TButton
+    Left = 88
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Neues Spiel'
+    OnClick = BNeuesSpielClick
+    TabOrder = 4
+  end
+  object LVersuche: TLabel
+    Left = 48
+    Height = 15
+    Top = 152
+    Width = 48
+    Caption = 'Versuche'
+    ParentColor = False
+  end
+  object EVersuche: TEdit
+    Left = 48
+    Height = 23
+    Top = 176
+    Width = 80
+    TabOrder = 5
+    Text = '0'
+  end
+end
